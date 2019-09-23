@@ -1,5 +1,5 @@
-# populationgenomics
+# Population Genomics
 
-Some of my scripts are found in this folder.
+Welcome! Some of my scripts are found in this folder, use them freely. I hope they're useful for your research.
 
-There is a script to do a PCA starting with a variant call format file (.vcf)
+In ./PCA/ , there is a script to do a PCA starting with a variant call format file (.vcf)
