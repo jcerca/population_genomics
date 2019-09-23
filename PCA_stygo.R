@@ -1,9 +1,9 @@
 ###Data_analysis
 #23_09_2019 JoseCerca
 
-#Few notes. The native format for adegenet is "genlight".
-#Useful tutorial from Filip Kolar which goes from vcf to genlight directly.
-#Filip's tutorial  https://botany.natur.cuni.cz/hodnocenidat/Lesson_05_tutorial.pdf
+# Few notes. The native format for adegenet is "genlight".
+# Useful tutorial from Filip Kolar which goes from vcf to genlight directly.
+# Filip's tutorial  https://botany.natur.cuni.cz/hodnocenidat/Lesson_05_tutorial.pdf
 
 #Clean up!
 rm(list=ls())
@@ -66,6 +66,9 @@ pca1 <- glPca(genlight_file)
 
 #CONVERTING THE PCA'S RESULTS TO A DATA_FRAME AND MANUALLY MAKING THE PLOT.
 
+#Notice, this part of the script is pretty specific to the way I named files.
+#It basically modifies the names following underscores and gets a "clade" identify and a "population" identity.
+
 temp<-rownames_to_column(as.data.frame(pca1$scores),"rownames") #passing the row names to the first column
 temp$LAB_ID<-temp$rownames #copying the first column to last
 
@@ -98,4 +101,3 @@ b
 c
 d
 dev.off()
-
