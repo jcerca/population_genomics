@@ -55,4 +55,12 @@ beast -seed 223456 -threads 10 -beagle snapp.xml
 beast -resume -seed 223456 -threads 10 -beagle snapp.xml
 ```
 
-Suggestion: Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. Then adapt it and run it on your own data. #extra file - cerca_snapp_onAbel.sh for a slurm example. Goodluck!
+6. Snapp will give you two files:
+The .log file and the .trees file.
+
+The .log will give you information on Chain covergence. You should load it on TRACER2 https://www.beast2.org/tracer-2/
+The .trees can be loaded on Densitree https://www.cs.auckland.ac.nz/~remco/DensiTree/
+If you want to have a Maximum Credibility Tree ( https://en.wikipedia.org/wiki/Maximum_clade_credibility_tree ), you can use TreeAnnotator https://www.beast2.org/treeannotator/  , and load the resulting file in DensiTree.
+
+
+Suggestion: Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. Then adapt it and run it on your own data. #extra files - cerca_snapp_onAbel.sh for a slurm example. Goodluck!
