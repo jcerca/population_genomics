@@ -36,8 +36,31 @@ grep -v "^\-1" my_vcf_structure.str > final_structure_file.str
 
 3. Getting the parameters files' 
 ```
+# There are two parameter files: mainparams and extraparams. Open the main params
+nano mainparams
+# Now, we need to change some rows.
 
+#define MAXPOPS     2         ### represents the numbers of clusters to run. STRUCTURE analyses are typically run for K1:Kn+1. K1 = single population, K2 = two populations.. Kn+1 = N+1 populations. In reality, I defined three species (blue, green, purple), so I will run from K1 til K4. Why K1? Because we will need to evaluate the fit of every analyses. I'll explain below.
+
+#define NUMINDS    70         ### Here you add the number of individuals - 70 in this casse.
+#define NUMLOCI    3428       ### Here you add the number of SNPs - 3428 in this case.
+
+# How do I know? Well, you can use:
+bcftools query -l blue.green.purple.r50.p8.stacks.maf0.05.maxMeanDP100.minMeanDP10.indswith90missingnessRemoved.randomSNP.vcf | wc -l # for individuals
+
+#Or you can use:
+vcftools --vcf --missing-site
+#which prints:
+#After filtering, kept 70 out of 70 Individuals
+#After filtering, kept 3428 out of a possible 3428 Sites
 ```
+
+5. Run structure!
+```
+structure -m mainparams -e extraparams -i final_structure_file.str -o .&
+```
+
 Suggestion:
 Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. 
 Then adapt it and run it on your own data.
+#extra file - cerca_structure_onAbel.sh for an example.
