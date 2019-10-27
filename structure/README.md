@@ -57,7 +57,7 @@ vcftools --vcf --missing-site
 
 5. Run structure!
 ```
-structure -m mainparams -e extraparams -i final_structure_file.str -o .&
+structure -m mainparams -e extraparams -i final_structure_file.str -o ./
 ```
 
 Suggestion:
