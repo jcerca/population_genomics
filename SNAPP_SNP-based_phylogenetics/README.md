@@ -1,5 +1,5 @@
-27/10/2019
-José Cerca
+#27/10/2019
+#José Cerca
 This repository has instructions on how to run the program SNAPP https://www.beast2.org/snapp/  , included as part of BEAST2 http://www.beast2.org . 
 
 Example data: blue.green.purple.r50.p8.stacks.maf0.05.maxMeanDP100.minMeanDP10.indswith90missingnessRemoved.randomSNP.vcf This is a variant call format file (VCF) with three species (blue - Stygocapitella subterranea, green - S. josemariobrancoi, purple - S. westheidei) which has been prunned for -r 0.50 (loci has to be present on 50% of a population), -p 8 (loci has to be present on at least 8 populations) on STACKS, and on 0.05 minimum allele frequency, 100 mean depth, 10 min depth on vcftools. After this, individuals with 90% missing data were removed, and only one SNP was kept per RAD-tag (notice, this is RADseq data, so each RADtag is considered as a chromossome).
