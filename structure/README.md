@@ -26,14 +26,18 @@ sed '/^#/! s/^/c/g' blue.green.purple.r50.p8.stacks.maf0.05.maxMeanDP100.minMean
 # Second, we use plink v1.96 to recode to structure
 plink --vcf input_for_structure.vcf --double-id --allow-extra-chr --set-missing-var-ids @:# --out my_vcf_structure --recode structure
 
-# Third, and very important, we have a file with various rows. Starting from the third row, we have individuals.
-# Column one will have individual_ID, column two will have a consecutive number (1..2..3..N_inds), column 3 and all the remaining have allelic information.
-# TO-DO: In COLUMN TWO, change the numbers to correspond to populations. In this dataset, I changed all blue individuals to "1", all purple to "3" and all green to "2". See "Structure_example.PNG
+# Third, and very important, we have a file with various rows. Starting from the third row, we have our individuals.
+# Column one will have individuals, column two will have a "random" number, and columns three-til the end will have allelic information.
+# TO-DO: In COLUMN TWO, change the numbers to correspond to populations. In this dataset, I changed all blue individuals to "1", all purple to "2" and all green to "3".
 
 # Forth, remove the second row.
 grep -v "^\-1" my_vcf_structure.str > final_structure_file.str
 ```
 
+3. Getting the parameters files' 
+```
+
+```
 Suggestion:
 Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. 
 Then adapt it and run it on your own data.
