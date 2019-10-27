@@ -60,7 +60,13 @@ vcftools --vcf --missing-site
 structure -m mainparams -e extraparams -i final_structure_file.str -o ./
 ```
 
+6. Running structure:
+You should run each K at least 5 times to make sure you get congruent results. Structure implements a Bayesian MCMC and sometimes the chain can get "stuck" on the wrong state.
+
+7. Plotting and deciding the best K
+I use http://clumpak.tau.ac.il/ to plot, and to estimate the best K http://clumpak.tau.ac.il/bestK.html .
+
 Suggestion:
 Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. 
 Then adapt it and run it on your own data.
-#extra file - cerca_structure_onAbel.sh for an example.
+#extra file - cerca_structure_onAbel.sh for a slurm example. Goodluck!
