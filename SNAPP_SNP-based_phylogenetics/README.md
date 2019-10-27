@@ -54,4 +54,5 @@ beast -seed 223456 -threads 10 -beagle snapp.xml
 ```
 beast -resume -seed 223456 -threads 10 -beagle snapp.xml
 ```
-See example
+
+Suggestion: Try running my script and see what the commands are doing, that is data convertion and formating, and analysis. Then adapt it and run it on your own data. #extra file - cerca_snapp_onAbel.sh for a slurm example. Goodluck!
