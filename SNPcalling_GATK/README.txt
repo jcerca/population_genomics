@@ -1,1 +1,1 @@
-#### This is for GATK4
+Collection of scripts for GATK4. Follow the numerical order.
