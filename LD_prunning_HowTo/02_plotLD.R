@@ -1,3 +1,6 @@
+#ml R/3.6.2-fosscuda-2019b
+#R
+
 # ld decay binning and plotting
 rm(list = ls())
 
