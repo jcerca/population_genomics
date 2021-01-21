@@ -25,3 +25,11 @@ plink --vcf $VCF --recode --allow-extra-chr \
 
 
 gzip LD_decay_Tetragnatha.ld
+
+#Now, let's get a file for R.
+awk '{print $7 "\t" $5-$2}' ../01_LDprunning/LD_decay_Tetragnatha.ld > ld.tetragnatha.tsv
+
+# Print column 7 (R2)
+# add a tab
+# Print column 5 minus column two (gives you distance between 2 snps)
+# Now we move to R.
